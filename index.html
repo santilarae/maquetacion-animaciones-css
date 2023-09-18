@@ -146,6 +146,37 @@
             color: var(--red);
             text-transform: uppercase;
         }
+
+        .main-content {
+            grid-area: section;
+            padding: 32px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            animation: 2.5s main-content 1s ease-in-out;
+        }
+
+        @keyframes main-content {
+
+            0% {
+                transform: translateX(-150%);
+            }
+
+            100% {
+                transform: translateY(0);
+            }
+        }
+
+        .main-content h1 {
+            font-size: 48px;
+            font-weight: 700;
+            margin: 0;
+        }
+
+        .main-content p:first-child {
+            font-size: 36px;
+            margin: 0 32px -14px 0;
+        }
     </style>
 </head>
 
