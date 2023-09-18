@@ -103,6 +103,49 @@
                 transform: scale(1);
             }
         }
+
+        .navbar {
+            grid-area: nav;
+            margin-top: 32px;
+            padding: 0 32px;
+            opacity: 0;
+            animation: navbar 1s ease-in-out 2s forwards;
+        }
+
+        @keyframes navbar {
+
+            0% {
+                transform: translateY(-200%);
+                opacity: 0;
+            }
+
+            100% {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        .navbar_content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .navbar_content img {
+            width: 50px;
+        }
+
+        .navbar_content ul {
+            list-style: none;
+            display: flex;
+            gap: 16px;
+        }
+
+        .navbar_content ul a {
+            text-decoration: none;
+            color: var(--red);
+            text-transform: uppercase;
+        }
     </style>
 </head>
 
@@ -112,7 +155,8 @@
         <section class="container">
             <nav class="navbar">
                 <div class="navbar_content">
-                    <img src="" alt="" />
+                    <img src="https://tiendalego.com.co/cdn/shop/files/LEGO-Logo_88x88_cf5cb234-fd96-44e1-9130-2fcf3bea77af_67x67.png?v=1649179371"
+                        alt="Lego Logo" />
                     <ul>
                         <li>
                             <a href="/">Exclusivos</a>
