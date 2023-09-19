@@ -175,7 +175,42 @@
 
         .main-content p:first-child {
             font-size: 36px;
-            margin: 0 32px -14px 0;
+            margin: 0 0 -14px 32px;
+        }
+
+        .side-content {
+            grid-area: aside;
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+            background: linear-gradient(to right, transparent 60%, var(--yellow) 60%);
+        }
+
+
+
+        .side-content img {
+            height: 80%;
+            animation: 2s superman-img 1s ease-in-out forwards;
+            transform: translateY(150%);
+        }
+
+        @keyframes superman-img {
+            to {
+                transform: translateY(0);
+            }
+        }
+
+        .side-content p {
+            font-size: 36px;
+            transform: rotate(-90deg);
+            animation: 1s superman 2s ease-in-out forwards;
+            clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%);
+        }
+
+        @keyframes superman {
+            to {
+                clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+            }
         }
     </style>
 </head>
@@ -218,7 +253,7 @@
 
             <section class="side-content">
                 <p>Superman</p>
-                <img src="" alt="" />
+                <img src="https://i.ibb.co/x16pz1x/super-man.png" alt="Superman Lego" />
                 <div></div>
             </section>
 
