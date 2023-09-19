@@ -212,6 +212,61 @@
                 clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
             }
         }
+
+        .footer {
+            display: flex;
+            justify-content: space-evenly;
+            background-color: var(--yellow);
+            border-top-right-radius: 32px;
+            padding: 64px;
+            padding-bottom: 0;
+            gap: 64px;
+            transform: translateY(100%);
+
+            animation: 1s footer 2s ease-in-out forwards;
+        }
+
+        @keyframes footer {
+
+            to {
+                transform: translateY(0);
+            }
+        }
+
+        .footer div {
+            flex: 1;
+            background-color: var(--blue);
+            border-radius: 16px 16px 0 0;
+            margin-top: 16px;
+            transform: translateY(100%);
+
+            animation: 1s footer-lego 2s ease-in-out forwards;
+        }
+
+        .footer div:nth-child(2) {
+            animation-delay: 2.2s;
+        }
+
+        .footer div:nth-child(3) {
+            animation-delay: 2.4s;
+        }
+
+        @keyframes footer-lego {
+            to {
+                transform: translateY(0);
+            }
+        }
+
+        .footer img {
+            margin-top: -64px;
+            width: 100%;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .footer div:hover img {
+            transform: scale(1.1);
+            cursor: pointer;
+        }
     </style>
 </head>
 
@@ -257,15 +312,15 @@
                 <div></div>
             </section>
 
-            <section>
+            <section class="footer">
                 <div>
-                    <img src="" alt="" />
+                    <img src="https://i.ibb.co/tKWqw8J/spiderman.png" alt="Spiderman lego" />
                 </div>
                 <div>
-                    <img src="" alt="" />
+                    <img src="https://i.ibb.co/Xzsdvgg/robin.png" alt="Robin Lego" />
                 </div>
                 <div>
-                    <img src="" alt="" />
+                    <img src="https://i.ibb.co/M18p91c/batman.webp" alt="Batman Lego" />
                 </div>
             </section>
         </section>
