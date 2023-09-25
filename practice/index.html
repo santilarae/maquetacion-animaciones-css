@@ -82,15 +82,63 @@
             </section>
         </div>
     </main>
+
+    <section class="modal">
+        <section class="modal-content">
+            <h2 class="modal-title">Productos</h2>
+            <button class="modal-close">
+                <svg aria-hidden="true" focusable="false" role="presentation" xmlns="http://www.w3.org/2000/svg"
+                    width="18" height="18" fill="none">
+                    <title>Cerrar ícono</title>
+                    <path d="M17 1L1 17M1 1l16 16" stroke="currentColor" stroke-width="1.75" stroke-linejoin="round">
+                    </path>
+                </svg>
+            </button>
+            <input type="radio" name="mario" id="mario-1" checked>
+            <input type="radio" name="mario" id="mario-2">
+            <input type="radio" name="mario" id="mario-3">
+            <div class="cards">
+                <label class="card" for="mario-1">
+                    <img src="https://tiendalego.com.co/cdn/shop/products/713602_384x384.jpg?v=1596503372"
+                        alt="AVENTURAS CON MARIO">
+                </label>
+                <label class="card" for="mario-2">
+                    <img src="https://tiendalego.com.co/cdn/shop/products/71367A_384x384.jpg?v=1595869434"
+                        alt="SET DE EXPANSIÓN: CASA DE MARIO Y YOSHI">
+
+                </label>
+                <label class="card" for="mario-3">
+                    <img src="https://tiendalego.com.co/cdn/shop/products/71363A_384x384.jpg?v=1595948132"
+                        alt="SET DE EXPANSIÓN: POKEY DEL DESIERTO">
+
+                </label>
+            </div>
+        </section>
+    </section>
+
     <script>
+        const modal = document.querySelector('.modal');
+        const modalClose = document.querySelector('.modal-close');
+        const characters = document.querySelectorAll('.character');
+
         const navbarOpen = document.querySelector('.navbar_btn');
         const navbar = document.querySelector('.navbar ul');
         const navbarClose = document.querySelector('.navbar .navbar_close');
+
+        function toggleModal() {
+            modal.classList.toggle('show')
+        }
+        
         function toggleNavbar() {
             navbar.classList.toggle('show')
         }
+
+        characters.forEach(character => {
+            character.addEventListener('click', toggleModal)
+        })
         navbarOpen.addEventListener('click', toggleNavbar);
         navbarClose.addEventListener('click', toggleNavbar);
+        modalClose.addEventListener('click', toggleModal);
     </script>
 </body>
 
